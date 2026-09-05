@@ -1,0 +1,46 @@
+package arrays;
+
+public class MedianofTwoSortedArrays {
+    public static void main(String[] args) {
+        int[] nums1={1,2};
+        int[] nums2={3,4};
+
+        double p=findMedianSortedArrays(nums1,nums2);
+        System.out.println(p);
+
+    }
+    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int n1=nums1.length;
+        int n2=nums2.length;
+        int[] nums=new int[n1+n2];
+        int n=nums.length;
+
+        int i = 0, j = 0, k = 0;
+    
+        while (i < n1 && j < n2) {
+            if (nums1[i] <= nums2[j]) {
+                nums[k++] = nums1[i++];
+            } else {
+                nums[k++] = nums2[j++];
+            }
+        }
+    
+        while (i < n1) {
+            nums[k++] = nums1[i++];
+        }
+    
+        while (j < n2) {
+            nums[k++] = nums2[j++];
+        }
+        if(n%2!=0){
+           int ans=n/2;
+            return nums[ans];
+        }
+        else{
+            double b=nums[n/2]+nums[(n/2)-1];
+            return b/2;
+        }
+        
+    }
+    
+}
