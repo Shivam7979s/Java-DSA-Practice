@@ -7,7 +7,7 @@ public class LinearSearchInArray {
     public static void main(String[] args) {
         int[] nums = {12, 45,7, 7, 23, 89, 34, 56};
         int target = 7;
-        
+
         ArrayList <Integer> list = new ArrayList<>();
 
         System.out.println(search(nums, target));
@@ -35,8 +35,6 @@ public class LinearSearchInArray {
         }
         return index(nums, target, j+1);
     }
-    
-
     static ArrayList allindex(int[] nums,int target, int i,ArrayList <Integer> list){
         if(i == nums.length){
             return list;
@@ -46,5 +44,4 @@ public class LinearSearchInArray {
         }
         return allindex(nums, target, i+1,list);
     }
-
 }
