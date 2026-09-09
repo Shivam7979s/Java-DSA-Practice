@@ -30,6 +30,7 @@ public class BestTimeToBuyAndSellStockIII {
             answer = Math.max(answer, prefixProfit + suffixProfit[i]);
         }
 
-        return answer; // i have not solve this problem by my own i will solve it later
+        return answer; //
+        // I've not solved this problem by my own i will solve it later
     }
 }

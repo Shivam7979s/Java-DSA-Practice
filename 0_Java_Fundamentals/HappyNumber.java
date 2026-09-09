@@ -3,30 +3,26 @@
 public class HappyNumber {
     public static void main(String[] args) {
         int n=19;
-        System.out.println(number(n));
+        System.out.println(isHappy(n));
+    }
+    static boolean isHappy(int n){
+        while( n !=1 && n !=4){
+
+            int temp = n;
+            int sum = 0;
+            while(temp != 0){
+                int rem = temp%10;
+                temp = temp/10;
+                sum += square(rem);
+
+            }
+            n = sum;
+
+        }
+        return n==1;
 
     }
-    static boolean number(int n){
-
-        int sum1=n;
-        while( sum1>0){
-            int sum=0;
-            while(n >0){
-            int rem= n%10;
-            n=n/10;
-            sum+=rem*rem;
-            }
-            if(sum1==1){
-                return true;
-            }
-        }
-
-        //incomplete
-
-
-       
-
-
-        return false;
+    static int square (int n){
+        return n*n;
     }
 }
