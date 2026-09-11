@@ -6,7 +6,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] nums = {4,3,2,-1,9,5,6,7,9};
         quickSort(nums,0,nums.length-1);
-        System.out.println(Arrays.toString(nums));
+        System.out.print(Arrays.toString(nums));
 
     }
     static void quickSort(int[] nums , int low , int high){
@@ -22,12 +22,12 @@ public class QuickSort {
             while(nums[s] < pivot){
                 s++;
             }
+            while(nums[e] > pivot){
+                e--;
+            }
+            if(s <= e){
+                int temp = nums[s];
                 nums[s] = nums[e];
-                while(nums[e] > pivot){
-                    e--;
-                }
-                if(s <= e){
-                    int temp = nums[s];
                 nums[e] = temp;
                 s++;
                 e--;
