@@ -2,12 +2,15 @@ package Recursion;
 
 import java.util.Arrays;
 
-public class MergeSortRecursion {
+public class setcolor {
     public static void main(String[] args) {
-        int[] nums = {6,5,7,5,4,7,9,5,3,23,45,7,6,4,2,4,56,7,75,8,-1,-5,0};
-        nums = mergeSort(nums);
-        System.out.println(Arrays.toString(nums));
+    int[] nums = {2,0,2,1,1,0};
+    sortColors(nums);
+    System.out.println(Arrays.toString(nums));
 
+    }
+    static void sortColors(int[] nums){
+        nums = mergeSort(nums);
     }
     static int[] mergeSort(int[] nums){
         int n = nums.length;

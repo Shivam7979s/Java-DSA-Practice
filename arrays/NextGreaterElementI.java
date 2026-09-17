@@ -26,7 +26,6 @@ public class NextGreaterElementI {
                     if (nums2[j] > nums1[i]) {
                         d = nums2[j];
                     }
-
                 }
                 k++;
             }
@@ -34,7 +33,6 @@ public class NextGreaterElementI {
                 ans[p]= d;
                 p++;
             }
-
         }
         return ans;
     }
